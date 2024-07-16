@@ -9,6 +9,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '16'
+      - run: echo "Installing npm packages"
       - run: npm install
+      - run: echo "Running tests"
       - run: npm test
+      - run: echo "Building the project"
       - run: npm build
